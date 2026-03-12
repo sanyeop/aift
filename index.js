@@ -15,7 +15,7 @@ const pool = new Pool({
 app.get("/", async (req, res) => {
   try {
     const result = await pool.query(
-      "SELECT neon FROM test LIMIT 1"
+      "SELECT name FROM test LIMIT 1"
     );
 
     const name = result.rows[0]?.neon || "Unknown";
